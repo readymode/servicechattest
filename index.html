@@ -10,7 +10,7 @@
   <body>
     <main>
         <h1>Readymode Service Chat Test</h1>
-        <script>
+<!--         <script>
             function launchChat() {
                 embeddedservice_bootstrap.utilAPI.launchChat()
                     .then(() => {
@@ -35,13 +35,13 @@
                     });
             }
         </script>
-        <button id="launchChatButton" onclick="launchChat()">Click to contact support</button>
+        <button id="launchChatButton" onclick="launchChat()">Click to contact support</button> -->
     </main>
     <script type='text/javascript'>
       function initEmbeddedMessaging() {
         try {
           embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-          embeddedservice_bootstrap.settings.hideChatButtonOnLoad = false;
+          embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
           embeddedservice_bootstrap.init(
             '00D3i000000G7qL',
             'netlifyReadymodeChatTest',
