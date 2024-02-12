@@ -10,24 +10,6 @@
   <body>
     <main>
         <h1>Welcome to My Website</h1>
-        <script type='text/javascript'>
-        	function initEmbeddedMessaging() {
-        		try {
-        			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-        			embeddedservice_bootstrap.init(
-        				'00D3i000000G7qL',
-        				'netlifyReadymodeChatTest',
-        				'https://xencall.my.site.com/ESWnetlifyReadymodeChatTe1707695941632',
-        				{
-        					scrt2URL: 'https://xencall.my.salesforce-scrt.com'
-        				}
-        			);
-        		} catch (err) {
-        			console.error('Error loading Embedded Messaging: ', err);
-        		}
-        	};
-        </script>
-        <script type='text/javascript' src='https://xencall.my.site.com/ESWnetlifyReadymodeChatTe1707695941632/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
         <script>
             function launchChat() {
                 // console.log("Churro is fried dough!");
@@ -52,5 +34,23 @@
         </script>
         <button id="launchChatButton" onclick="launchChat()">Click to contact support</button>
     </main>
+    <script type='text/javascript'>
+      function initEmbeddedMessaging() {
+        try {
+          embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+          embeddedservice_bootstrap.init(
+            '00D3i000000G7qL',
+            'netlifyReadymodeChatTest',
+            'https://xencall.my.site.com/ESWnetlifyReadymodeChatTe1707695941632',
+            {
+              scrt2URL: 'https://xencall.my.salesforce-scrt.com'
+            }
+          );
+        } catch (err) {
+          console.error('Error loading Embedded Messaging: ', err);
+        }
+      };
+    </script>
+    <script type='text/javascript' src='https://xencall.my.site.com/ESWnetlifyReadymodeChatTe1707695941632/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
   </body>
 </html>
