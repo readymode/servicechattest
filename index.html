@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Readymode Service Chat Test</title>
@@ -10,34 +9,31 @@
   <body>
     <main>
         <h1>Readymode Service Chat Test</h1>
-<!--         <script>
-            function launchChat() {
-                embeddedservice_bootstrap.utilAPI.launchChat()
-                    .then(() => {
-                        // Success handler used to perform actions
-                        // when the chat client launches successfully.
-                        // For example, create a method that disables the launch chat button.
-                        // disableLaunchChatButton();
-                        console.log("Chat client launched successfully");
-                    }).catch(() => {
-                        // Error handler used to perform actions
-                        // if the chat client fails to launch.
-                        // For example, create a method that hides the launch chat button.
-                        // hideLaunchChatButton();
-                        console.log("Launch failed!");
-                    }).finally(() => {
-                        // Finally handler used to perform any clean-up actions
-                        // regardless of whether the chat client launches successfully or not.
-                        // For example, create a method that logs the user’s attempt to chat.
-                        // logEndUserAttemptToChat();
-                        console.log("Launch Chat complete");
-
-                    });
-            }
-        </script>
-        <button id="launchChatButton" onclick="launchChat()">Click to contact support</button> -->
+<!--         <button id="launchChatButton" onclick="launchChat()">Click to contact support</button> -->
     </main>
     <script type='text/javascript'>
+      function launchChat() {
+        embeddedservice_bootstrap.utilAPI.launchChat()
+        .then(() => {
+            // Success handler used to perform actions
+            // when the chat client launches successfully.
+            // For example, create a method that disables the launch chat button.
+            // disableLaunchChatButton();
+            console.log("Chat client launched successfully");
+        }).catch(() => {
+            // Error handler used to perform actions
+            // if the chat client fails to launch.
+            // For example, create a method that hides the launch chat button.
+            // hideLaunchChatButton();
+            console.log("Launch failed!");
+        }).finally(() => {
+            // Finally handler used to perform any clean-up actions
+            // regardless of whether the chat client launches successfully or not.
+            // For example, create a method that logs the user’s attempt to chat.
+            // logEndUserAttemptToChat();
+            console.log("Launch Chat complete");
+        });
+      } 
       window.addEventListener("onEmbeddedMessagingReady", () => {
         console.log("Received the onEmbeddedMessagingReady event…");
 
@@ -54,23 +50,23 @@
         // Remove any items from the previous list that you don't want to send
         // embeddedservice_bootstrap.prechatAPI.removeHiddenPrechatFields(["Customer_ID"]);
       });
-      function initEmbeddedMessaging() {
-        try {
-          embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+    	function initEmbeddedMessaging() {
+    		try {
+    			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
           // embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
-          embeddedservice_bootstrap.init(
-            '00D3i000000G7qL',
-            'Messaging_Embedded_Service',
-            'https://xencall.my.site.com/ESWMessagingEmbeddedSer1706540302879',
-            {
-              scrt2URL: 'https://xencall.my.salesforce-scrt.com'
-            }
-          );
-        } catch (err) {
-          console.error('Error loading Embedded Messaging: ', err);
-        }
-      };
+    			embeddedservice_bootstrap.init(
+    				'00D3i000000G7qL',
+    				'Messages_for_Web_Readymode_Prod',
+    				'https://xencall.my.site.com/ESWMessagesforWebReady1708400429237',
+    				{
+    					scrt2URL: 'https://xencall.my.salesforce-scrt.com'
+    				}
+    			);
+    		} catch (err) {
+    			console.error('Error loading Embedded Messaging: ', err);
+    		}
+    	};
     </script>
-    <script type='text/javascript' src='https://xencall.my.site.com/ESWMessagingEmbeddedSer1706540302879/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    <script type='text/javascript' src='https://xencall.my.site.com/ESWMessagesforWebReady1708400429237/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
   </body>
 </html>
