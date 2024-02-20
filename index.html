@@ -50,22 +50,22 @@
         // Remove any items from the previous list that you don't want to send
         // embeddedservice_bootstrap.prechatAPI.removeHiddenPrechatFields(["Customer_ID"]);
       });
-    	function initEmbeddedMessaging() {
-    		try {
-    			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+      function initEmbeddedMessaging() {
+        try {
+          embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
           // embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
-    			embeddedservice_bootstrap.init(
-    				'00D3i000000G7qL',
-    				'Messages_for_Web_Readymode_Prod',
-    				'https://xencall.my.site.com/ESWMessagesforWebReady1708400429237',
-    				{
-    					scrt2URL: 'https://xencall.my.salesforce-scrt.com'
-    				}
-    			);
-    		} catch (err) {
-    			console.error('Error loading Embedded Messaging: ', err);
-    		}
-    	};
+          embeddedservice_bootstrap.init(
+            '00D3i000000G7qL',
+            'Messages_for_Web_Readymode_Prod',
+            'https://xencall.my.site.com/ESWMessagesforWebReady1708400429237',
+            {
+              scrt2URL: 'https://xencall.my.salesforce-scrt.com'
+            }
+          );
+          } catch (err) {
+            console.error('Error loading Embedded Messaging: ', err);
+          }
+        };
     </script>
     <script type='text/javascript' src='https://xencall.my.site.com/ESWMessagesforWebReady1708400429237/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
   </body>
