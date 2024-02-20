@@ -12,28 +12,28 @@
 <!--         <button id="launchChatButton" onclick="launchChat()">Click to contact support</button> -->
     </main>
     <script type='text/javascript'>
-      function launchChat() {
-        embeddedservice_bootstrap.utilAPI.launchChat()
-        .then(() => {
-            // Success handler used to perform actions
-            // when the chat client launches successfully.
-            // For example, create a method that disables the launch chat button.
-            // disableLaunchChatButton();
-            console.log("Chat client launched successfully");
-        }).catch(() => {
-            // Error handler used to perform actions
-            // if the chat client fails to launch.
-            // For example, create a method that hides the launch chat button.
-            // hideLaunchChatButton();
-            console.log("Launch failed!");
-        }).finally(() => {
-            // Finally handler used to perform any clean-up actions
-            // regardless of whether the chat client launches successfully or not.
-            // For example, create a method that logs the user’s attempt to chat.
-            // logEndUserAttemptToChat();
-            console.log("Launch Chat complete");
-        });
-      } 
+      // function launchChat() {
+      //   embeddedservice_bootstrap.utilAPI.launchChat()
+      //   .then(() => {
+      //       // Success handler used to perform actions
+      //       // when the chat client launches successfully.
+      //       // For example, create a method that disables the launch chat button.
+      //       // disableLaunchChatButton();
+      //       console.log("Chat client launched successfully");
+      //   }).catch(() => {
+      //       // Error handler used to perform actions
+      //       // if the chat client fails to launch.
+      //       // For example, create a method that hides the launch chat button.
+      //       // hideLaunchChatButton();
+      //       console.log("Launch failed!");
+      //   }).finally(() => {
+      //       // Finally handler used to perform any clean-up actions
+      //       // regardless of whether the chat client launches successfully or not.
+      //       // For example, create a method that logs the user’s attempt to chat.
+      //       // logEndUserAttemptToChat();
+      //       console.log("Launch Chat complete");
+      //   });
+      // } 
       window.addEventListener("onEmbeddedMessagingReady", () => {
         console.log("Received the onEmbeddedMessagingReady event…");
 
@@ -56,8 +56,8 @@
           // embeddedservice_bootstrap.settings.hideChatButtonOnLoad = true;
           embeddedservice_bootstrap.init(
             '00D3i000000G7qL',
-            'Messages_for_Web_Readymode_Prod',
-            'https://xencall.my.site.com/ESWMessagesforWebReady1708400429237',
+            'netlifyReadymodeChatTest',
+            'https://xencall.my.site.com/ESWnetlifyReadymodeChatTe1707695941632',
             {
               scrt2URL: 'https://xencall.my.salesforce-scrt.com'
             }
@@ -67,6 +67,6 @@
           }
         };
     </script>
-    <script type='text/javascript' src='https://xencall.my.site.com/ESWMessagesforWebReady1708400429237/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    <script type='text/javascript' src='https://xencall.my.site.com/ESWnetlifyReadymodeChatTe1707695941632/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
   </body>
 </html>
